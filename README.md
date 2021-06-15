@@ -1,2 +1,2 @@
 # Get-Longi_Lati
-read me in case 
+hope you don't have to read me
