@@ -35,7 +35,9 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.781" />
+        app:layout_constraintVertical_bias="0.781"
+        android:textColor="#FFF"
+        android:background="@color/colorAccent"/>
 
     <Button
         android:id="@+id/associer_position"
@@ -44,6 +46,9 @@
         android:gravity="center"
         android:onClick="associer_position"
         android:text="Associer a une Position :"
+        android:textColor="#FFF"
+        android:background="@color/colorPrimaryDark"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
@@ -164,18 +169,34 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.653" />
 
-    <EditText
-        android:id="@+id/tache_nom_pos"
-        android:layout_width="90dp"
-        android:layout_height="63dp"
-        android:layout_marginStart="147dp"
-        android:gravity="center"
-        android:hint="TextView"
+
+
+    <Button
+        android:id="@+id/button8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark"
+        android:onClick="cancel"
+        android:text="Cancel"
+        android:textColor="#FFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.025"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.57" />
+        app:layout_constraintVertical_bias="0.855" />
+
+    <EditText
+        android:id="@+id/tache_nom_pos1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/associer_position" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

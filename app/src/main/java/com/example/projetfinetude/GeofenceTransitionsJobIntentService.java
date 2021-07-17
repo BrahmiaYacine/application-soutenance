@@ -131,7 +131,7 @@ public class GeofenceTransitionsJobIntentService extends JobIntentService {
 
         // Create an explicit content Intent that starts the main Activity.
         Intent notificationIntent = new Intent(getApplicationContext(), HomePage_Drawer.class);
-        //notificationIntent.putExtra("positions", tiers);
+        notificationIntent.putExtra("positions", "bonjour");
 
         // Construct a task stack.
         TaskStackBuilder stackBuilder = TaskStackBuilder.create(this);

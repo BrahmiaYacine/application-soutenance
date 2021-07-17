@@ -3,6 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:padding="16dp"
     android:gravity="center_horizontal"
@@ -83,5 +84,30 @@
      android:layout_height="wrap_content"
      android:text="LISTE DES POSITIONS"
      android:onClick="goToPosition_List"/>
+
+ <LinearLayout
+     android:layout_width="393dp"
+     android:layout_height="384dp"
+     android:gravity="bottom"
+     android:orientation="vertical">
+
+  <Button
+      android:id="@+id/button9"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_gravity="left|end"
+      android:background="@color/colorPrimaryDark"
+      android:onClick="cancel"
+      android:text="Cancel"
+      android:textColor="#FFF"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.0"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintVertical_bias="0.0" />
+ </LinearLayout>
+ />
+
 
 </LinearLayout>

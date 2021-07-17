@@ -2,6 +2,7 @@ package com.example.projetfinetude;
 
 import android.os.Bundle;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.LifecycleOwner;
@@ -16,8 +17,11 @@ public class TacheListe extends AppCompatActivity {
     private TachesViewModel viewModel;
     private EditText title;
     private EditText content;
+    private TextView tache_nom_pos;
+
     private TachesAdapter tachesAdapter;
     private Positions positions ;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,8 +38,10 @@ public class TacheListe extends AppCompatActivity {
     }
     private void initViews(){
         RecyclerView recyclerView = findViewById(R.id.tachesliste);
-        title = findViewById(R.id.tache_title);
-        content = findViewById(R.id.description);
+        title           = findViewById(R.id.tache_title);
+        content         = findViewById(R.id.description);
+     tache_nom_pos   = findViewById(R.id.tache_nom_pos);
+
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         tachesAdapter = new TachesAdapter();
         recyclerView.setAdapter(tachesAdapter);

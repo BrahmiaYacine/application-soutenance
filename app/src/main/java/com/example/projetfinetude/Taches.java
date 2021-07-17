@@ -10,7 +10,6 @@ import com.pentabin.livingroom.annotations.Crudable;
 public class Taches extends BasicEntity {
     private String title;
     private String description;
-   // private int id_position ;
     private String nom_position;
     private String longitude;
     private String latitude;
@@ -18,7 +17,6 @@ public class Taches extends BasicEntity {
     public Taches(String title, String description, String nom_position, String longitude, String latitude) {
         this.title = title;
         this.description = description;
-       // this.id_position = id_position;
         this.nom_position = nom_position;
         this.latitude = latitude;
         this.longitude = longitude;

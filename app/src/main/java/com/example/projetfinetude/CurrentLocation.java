@@ -254,4 +254,8 @@ public class CurrentLocation extends AppCompatActivity {
         }
 
 
+    public void cancel(View view) {
+        Intent intent = new Intent(this,HomePage2.class);
+        startActivity(intent);
     }
+}

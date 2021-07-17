@@ -71,6 +71,7 @@ public class Geofencing implements ResultCallback {
                 .addOnFailureListener(new OnFailureListener() {
                     @Override
                     public void onFailure(@NonNull Exception e) {
+                        Log.e("TAGFAIL", "Geofences failed to  add");
                         // Failed to add geofences
                         // ...
                     }

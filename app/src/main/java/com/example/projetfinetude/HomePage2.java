@@ -40,6 +40,7 @@ public class HomePage2 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_page2);
        // geoFencing();
+
     }
 
 
