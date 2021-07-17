@@ -4,18 +4,16 @@ import androidx.room.Entity;
 
 import com.pentabin.livingroom.BasicEntity;
 import com.pentabin.livingroom.annotations.Crudable;
-import com.pentabin.livingroom.annotations.SelectableWhere;
+import com.pentabin.livingroom.annotations.SelectableById;
 
-    @Crudable
-    @SelectableWhere(methodName = "getArchived", where = "isDeleted = 1")
-    @SelectableWhere(methodName = "getDateRange",
-            where = "created_at > :from AND created_at < :to",
-            params = {"java.util.Date from", "java.util.Date to"})
+@Crudable
+    @SelectableById
     @Entity
     public class Positions extends BasicEntity {
         private String Name;
         private String latitude;
         private String longitude;
+
 
         public Positions(String Name, String latitude, String longitude) {
             this.Name = Name;

@@ -4,22 +4,46 @@ import androidx.room.Entity;
 
 import com.pentabin.livingroom.BasicEntity;
 import com.pentabin.livingroom.annotations.Crudable;
-import com.pentabin.livingroom.annotations.SelectableWhere;
 
 @Crudable
-@SelectableWhere(methodName = "getArchived", where = "isDeleted = 1")
-@SelectableWhere(methodName = "getDateRange",
-        where = "created_at > :from AND created_at < :to",
-        params = {"java.util.Date from", "java.util.Date to"})
 @Entity
 public class Taches extends BasicEntity {
     private String title;
-   // private String content;
+    private String description;
+   // private int id_position ;
+    private String nom_position;
+    private String longitude;
+    private String latitude;
 
-    public Taches(String title) {
+    public Taches(String title, String description, String nom_position, String longitude, String latitude) {
         this.title = title;
-  //      this.content = content;
+        this.description = description;
+       // this.id_position = id_position;
+        this.nom_position = nom_position;
+        this.latitude = latitude;
+        this.longitude = longitude;
+
     }
+    /*public String gettachelatitude() {
+       // return latitude;
+    }
+    public String gettachelongitude() {
+        return longitude;
+    }
+
+    public void settachelatitude(String latitude) {
+        this.latitude = latitude;
+    }
+    public void settachelongitude(String longitude) { this.longitude = longitude;  }
+*/
+
+
+
+
+
+   // public int getPosition_Id() {  return id_position;    }
+   // public void setPosition_Id() {  this.id_position=id_position;    }
+
 
     public String getTitle() {
         return title;
@@ -29,11 +53,47 @@ public class Taches extends BasicEntity {
         this.title = title;
     }
 
-  //  public String getContent() {
-    //    return content;
-    //}
-
-    //public void setContent(String content) {
-      //  this.content = content;
+    public String getDescription() {
+        return description;
     }
+
+    public void setDescription(String description) {   this.description = description;    }
+
+    public String getNom_position() {
+        return nom_position;
+    }
+
+    public void setNom_position(String nom_position) {
+        this.nom_position = nom_position;
+    }
+
+    public String getLongitude() {
+        return longitude;
+    }
+
+    public void setLongitude(String longitude) {
+        this.longitude = longitude;
+    }
+
+    public String getLatitude() {
+        return latitude;
+    }
+
+    public void setLatitude(String latitude) {
+        this.latitude = latitude;
+    }
+
+
+    /*public void setPosition_Id(int id_position) {
+        this.id_position = id_position;
+    }*/
+/*
+    public String getNom_position() {
+        return nom_position;
+    }
+
+    public void setNom_position(String nom_position) {
+        this.nom_position = nom_position;
+    }*/
+}
 
